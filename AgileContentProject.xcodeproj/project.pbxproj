@@ -14,6 +14,7 @@
 		2876BB8D228DE9CF005616FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2876BB8B228DE9CF005616FD /* LaunchScreen.storyboard */; };
 		2876BB98228DE9CF005616FD /* AgileContentProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BB97228DE9CF005616FD /* AgileContentProjectTests.swift */; };
 		2876BBA3228DE9CF005616FD /* AgileContentProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBA2228DE9CF005616FD /* AgileContentProjectUITests.swift */; };
+		2876BBB8228DF39D005616FD /* HomeScreenViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBB7228DF39D005616FD /* HomeScreenViewInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2876BB9E228DE9CF005616FD /* AgileContentProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgileContentProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2876BBA2228DE9CF005616FD /* AgileContentProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgileContentProjectUITests.swift; sourceTree = "<group>"; };
 		2876BBA4228DE9CF005616FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2876BBB7228DF39D005616FD /* HomeScreenViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +128,7 @@
 		2876BBB0228DEA6C005616FD /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
-				2876BB84228DE9CE005616FD /* HomeScreenViewController.swift */,
+				2876BBB6228DF35A005616FD /* View */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -171,6 +173,15 @@
 				2876BB89228DE9CF005616FD /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		2876BBB6228DF35A005616FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2876BB84228DE9CE005616FD /* HomeScreenViewController.swift */,
+				2876BBB7228DF39D005616FD /* HomeScreenViewInterface.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2876BB85228DE9CE005616FD /* HomeScreenViewController.swift in Sources */,
+				2876BBB8228DF39D005616FD /* HomeScreenViewInterface.swift in Sources */,
 				2876BB83228DE9CE005616FD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,7 +495,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z2U9XN2WL3;
 				INFOPLIST_FILE = "$(SRCROOT)/AgileContentProject/SupportFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -502,7 +514,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z2U9XN2WL3;
 				INFOPLIST_FILE = "$(SRCROOT)/AgileContentProject/SupportFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
