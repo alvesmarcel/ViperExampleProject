@@ -1,5 +1,5 @@
 import UIKit
 
-protocol HomeScreenViewInterface {
+protocol HomeScreenViewInterface: class {
     func showErrorMessage(title: String, message: String)
 }

@@ -28,6 +28,11 @@
 		2876BBDC22904150005616FD /* existing_user_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 2876BBDB22904150005616FD /* existing_user_response.json */; };
 		2876BBDE22904156005616FD /* inexistent_user_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 2876BBDD22904156005616FD /* inexistent_user_response.json */; };
 		2876BBE022904AED005616FD /* user_repositories_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 2876BBDF22904AED005616FD /* user_repositories_response.json */; };
+		2876BBE422907935005616FD /* HomeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBE322907935005616FD /* HomeScreenPresenter.swift */; };
+		2876BBE622907944005616FD /* HomeScreenPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBE522907944005616FD /* HomeScreenPresenterInterface.swift */; };
+		2876BBE822907F38005616FD /* HomeScreenError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBE722907F38005616FD /* HomeScreenError.swift */; };
+		2876BBED229088C6005616FD /* HomeScreenWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBEC229088C6005616FD /* HomeScreenWireframe.swift */; };
+		2876BBEF229088F0005616FD /* HomeScreenWireframeInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBEE229088F0005616FD /* HomeScreenWireframeInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +80,11 @@
 		2876BBDB22904150005616FD /* existing_user_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = existing_user_response.json; sourceTree = "<group>"; };
 		2876BBDD22904156005616FD /* inexistent_user_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = inexistent_user_response.json; sourceTree = "<group>"; };
 		2876BBDF22904AED005616FD /* user_repositories_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user_repositories_response.json; sourceTree = "<group>"; };
+		2876BBE322907935005616FD /* HomeScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenPresenter.swift; sourceTree = "<group>"; };
+		2876BBE522907944005616FD /* HomeScreenPresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenPresenterInterface.swift; sourceTree = "<group>"; };
+		2876BBE722907F38005616FD /* HomeScreenError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenError.swift; sourceTree = "<group>"; };
+		2876BBEC229088C6005616FD /* HomeScreenWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenWireframe.swift; sourceTree = "<group>"; };
+		2876BBEE229088F0005616FD /* HomeScreenWireframeInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenWireframeInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,11 +198,10 @@
 		2876BBB4228DEE54005616FD /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				2876BBCB228EDC62005616FD /* GithubAPI */,
-				2876BBC4228E0476005616FD /* NetworkService */,
 				2876BB82228DE9CE005616FD /* AppDelegate.swift */,
-				2876BBC0228DFCF6005616FD /* GithubUser.swift */,
-				2876BBD2228EDDC4005616FD /* GithubRepository.swift */,
+				2876BBEA22907FD9005616FD /* Errors */,
+				2876BBE222907773005616FD /* GithubModel */,
+				2876BBC4228E0476005616FD /* NetworkService */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -210,8 +219,8 @@
 		2876BBB6228DF35A005616FD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2876BB84228DE9CE005616FD /* HomeScreenViewController.swift */,
 				2876BBB7228DF39D005616FD /* HomeScreenViewInterface.swift */,
+				2876BB84228DE9CE005616FD /* HomeScreenViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,6 +236,8 @@
 		2876BBBA228DF7B6005616FD /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				2876BBEB229088A8005616FD /* Wireframe */,
+				2876BBE1229053A3005616FD /* Presenter */,
 				2876BBB6228DF35A005616FD /* View */,
 			);
 			path = UserInterface;
@@ -252,13 +263,6 @@
 			path = NetworkService;
 			sourceTree = "<group>";
 		};
-		2876BBCB228EDC62005616FD /* GithubAPI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GithubAPI;
-			sourceTree = "<group>";
-		};
 		2876BBDA22904109005616FD /* NetworkServiceTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +273,41 @@
 				2876BBD6228F2123005616FD /* NetworkServiceTests.swift */,
 			);
 			path = NetworkServiceTests;
+			sourceTree = "<group>";
+		};
+		2876BBE1229053A3005616FD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2876BBE522907944005616FD /* HomeScreenPresenterInterface.swift */,
+				2876BBE322907935005616FD /* HomeScreenPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2876BBE222907773005616FD /* GithubModel */ = {
+			isa = PBXGroup;
+			children = (
+				2876BBC0228DFCF6005616FD /* GithubUser.swift */,
+				2876BBD2228EDDC4005616FD /* GithubRepository.swift */,
+			);
+			path = GithubModel;
+			sourceTree = "<group>";
+		};
+		2876BBEA22907FD9005616FD /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				2876BBE722907F38005616FD /* HomeScreenError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		2876BBEB229088A8005616FD /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				2876BBEE229088F0005616FD /* HomeScreenWireframeInterface.swift */,
+				2876BBEC229088C6005616FD /* HomeScreenWireframe.swift */,
+			);
+			path = Wireframe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,16 +445,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				2876BBCA228E06AC005616FD /* NetworkService.swift in Sources */,
+				2876BBE422907935005616FD /* HomeScreenPresenter.swift in Sources */,
 				2876BBD922902D1F005616FD /* NetworkServiceProtocols.swift in Sources */,
+				2876BBE822907F38005616FD /* HomeScreenError.swift in Sources */,
 				2876BBC3228DFF20005616FD /* HomeScreenInteractorDelegate.swift in Sources */,
 				2876BBD1228EDC91005616FD /* GithubAPI.swift in Sources */,
+				2876BBED229088C6005616FD /* HomeScreenWireframe.swift in Sources */,
 				2876BB85228DE9CE005616FD /* HomeScreenViewController.swift in Sources */,
 				2876BBC1228DFCF6005616FD /* GithubUser.swift in Sources */,
 				2876BBBD228DF839005616FD /* HomeScreenInteractor.swift in Sources */,
 				2876BBB8228DF39D005616FD /* HomeScreenViewInterface.swift in Sources */,
+				2876BBEF229088F0005616FD /* HomeScreenWireframeInterface.swift in Sources */,
 				2876BB83228DE9CE005616FD /* AppDelegate.swift in Sources */,
 				2876BBD3228EDDC4005616FD /* GithubRepository.swift in Sources */,
 				2876BBBF228DFBA4005616FD /* HomeScreenInteractorInterface.swift in Sources */,
+				2876BBE622907944005616FD /* HomeScreenPresenterInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,7 +639,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z2U9XN2WL3;
 				INFOPLIST_FILE = "$(SRCROOT)/AgileContentProject/SupportFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -614,7 +658,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z2U9XN2WL3;
 				INFOPLIST_FILE = "$(SRCROOT)/AgileContentProject/SupportFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
