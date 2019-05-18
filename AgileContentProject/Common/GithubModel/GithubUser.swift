@@ -1,3 +1,5 @@
+// Abstract: Github user container
+
 import Foundation
 
 struct GithubUser: Codable {

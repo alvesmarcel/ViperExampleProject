@@ -1,3 +1,5 @@
+// Abstract: A class that provides the basic functionality to retrieve a Github user or a user's repositories
+
 import Foundation
 
 class GithubAPI {
