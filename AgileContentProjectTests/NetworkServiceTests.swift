@@ -1,11 +1,3 @@
-//
-//  NetworkServiceTests.swift
-//  AgileContentProjectTests
-//
-//  Created by Marcel Oliveira Alves on 5/17/19.
-//  Copyright © 2019 Marcel Oliveira Alves. All rights reserved.
-//
-
 import XCTest
 @testable import AgileContentProject
 
@@ -73,7 +65,7 @@ class NetworkServiceTests: XCTestCase {
     }
     
     func testRequestFailed() {
-        let expectedError = NetworkService.NetworkError.connectionFailed
+        let expectedError = NSError(domain: "AnyError", code: 0, userInfo: nil)
         session.nextError = expectedError
         
         guard let url = URL(string: "https://api.github.com/users/") else {
@@ -81,14 +73,14 @@ class NetworkServiceTests: XCTestCase {
         }
         
         var actualData: Data?
-        var actualError: NetworkService.NetworkError?
+        var actualError: Error?
         
         networkService.requestDataFromURL(url: url) { (data, error) in
             actualData = data
             actualError = error
         }
         
-        XCTAssertEqual(actualError, expectedError)
+        XCTAssertNotNil(actualError)
         XCTAssertNil(actualData)
     }
 

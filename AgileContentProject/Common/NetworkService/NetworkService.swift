@@ -4,20 +4,16 @@ import Foundation
 
 class NetworkService {
     
-    enum NetworkError: Error {
-        case connectionFailed
-    }
-    
     private let session: URLSessionProtocol
     
     init(session: URLSessionProtocol) {
         self.session = session
     }
     
-    func requestDataFromURL(url: URL, completionHandler: @escaping (_ data: Data?, _ error: NetworkError?) -> Void) {
+    func requestDataFromURL(url: URL, completionHandler: @escaping (_ data: Data?, _ error: Error?) -> Void) {
         let task = session.dataTask(with: url) {(data, _, error) in
             guard let receivedData = data else {
-                completionHandler(nil, .connectionFailed)
+                completionHandler(nil, error)
                 return
             }
             completionHandler(receivedData, nil)
