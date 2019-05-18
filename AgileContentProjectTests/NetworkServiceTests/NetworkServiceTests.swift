@@ -1,26 +1,26 @@
 import XCTest
 @testable import AgileContentProject
 
-class MockURLSession: URLSessionProtocol {
-    var nextData: Data?
-    var nextError: Error?
-    var nextDataTask = MockURLSessionDataTask()
-    private (set) var lastURL: URL?
-    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
-        lastURL = url
-        completionHandler(nextData, nil, nextError)
-        return nextDataTask
-    }
-}
-
-class MockURLSessionDataTask: URLSessionDataTaskProtocol {
-    private (set) var resumeWasCalled = false
-    func resume() {
-        resumeWasCalled = true
-    }
-}
-
 class NetworkServiceTests: XCTestCase {
+    
+    class MockURLSession: URLSessionProtocol {
+        var nextData: Data?
+        var nextError: Error?
+        var nextDataTask = MockURLSessionDataTask()
+        private (set) var lastURL: URL?
+        func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
+            lastURL = url
+            completionHandler(nextData, nil, nextError)
+            return nextDataTask
+        }
+    }
+    
+    class MockURLSessionDataTask: URLSessionDataTaskProtocol {
+        private (set) var resumeWasCalled = false
+        func resume() {
+            resumeWasCalled = true
+        }
+    }
     
     var networkService: NetworkService!
     let session = MockURLSession()

@@ -15,6 +15,19 @@
 		2876BB98228DE9CF005616FD /* AgileContentProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BB97228DE9CF005616FD /* AgileContentProjectTests.swift */; };
 		2876BBA3228DE9CF005616FD /* AgileContentProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBA2228DE9CF005616FD /* AgileContentProjectUITests.swift */; };
 		2876BBB8228DF39D005616FD /* HomeScreenViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBB7228DF39D005616FD /* HomeScreenViewInterface.swift */; };
+		2876BBBD228DF839005616FD /* HomeScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBBC228DF839005616FD /* HomeScreenInteractor.swift */; };
+		2876BBBF228DFBA4005616FD /* HomeScreenInteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBBE228DFBA4005616FD /* HomeScreenInteractorInterface.swift */; };
+		2876BBC1228DFCF6005616FD /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBC0228DFCF6005616FD /* GithubUser.swift */; };
+		2876BBC3228DFF20005616FD /* HomeScreenInteractorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBC2228DFF20005616FD /* HomeScreenInteractorDelegate.swift */; };
+		2876BBCA228E06AC005616FD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBC9228E06AC005616FD /* NetworkService.swift */; };
+		2876BBD1228EDC91005616FD /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBD0228EDC91005616FD /* GithubAPI.swift */; };
+		2876BBD3228EDDC4005616FD /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBD2228EDDC4005616FD /* GithubRepository.swift */; };
+		2876BBD5228F183C005616FD /* GithubAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBD4228F183C005616FD /* GithubAPITests.swift */; };
+		2876BBD7228F2123005616FD /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBD6228F2123005616FD /* NetworkServiceTests.swift */; };
+		2876BBD922902D1F005616FD /* NetworkServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBD822902D1F005616FD /* NetworkServiceProtocols.swift */; };
+		2876BBDC22904150005616FD /* existing_user_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 2876BBDB22904150005616FD /* existing_user_response.json */; };
+		2876BBDE22904156005616FD /* inexistent_user_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 2876BBDD22904156005616FD /* inexistent_user_response.json */; };
+		2876BBE022904AED005616FD /* user_repositories_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 2876BBDF22904AED005616FD /* user_repositories_response.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +62,19 @@
 		2876BBA2228DE9CF005616FD /* AgileContentProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgileContentProjectUITests.swift; sourceTree = "<group>"; };
 		2876BBA4228DE9CF005616FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2876BBB7228DF39D005616FD /* HomeScreenViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewInterface.swift; sourceTree = "<group>"; };
+		2876BBBC228DF839005616FD /* HomeScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenInteractor.swift; sourceTree = "<group>"; };
+		2876BBBE228DFBA4005616FD /* HomeScreenInteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenInteractorInterface.swift; sourceTree = "<group>"; };
+		2876BBC0228DFCF6005616FD /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
+		2876BBC2228DFF20005616FD /* HomeScreenInteractorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenInteractorDelegate.swift; sourceTree = "<group>"; };
+		2876BBC9228E06AC005616FD /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2876BBD0228EDC91005616FD /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
+		2876BBD2228EDDC4005616FD /* GithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
+		2876BBD4228F183C005616FD /* GithubAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GithubAPITests.swift; path = AgileContentProjectTests/NetworkServiceTests/GithubAPITests.swift; sourceTree = SOURCE_ROOT; };
+		2876BBD6228F2123005616FD /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		2876BBD822902D1F005616FD /* NetworkServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocols.swift; sourceTree = "<group>"; };
+		2876BBDB22904150005616FD /* existing_user_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = existing_user_response.json; sourceTree = "<group>"; };
+		2876BBDD22904156005616FD /* inexistent_user_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = inexistent_user_response.json; sourceTree = "<group>"; };
+		2876BBDF22904AED005616FD /* user_repositories_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user_repositories_response.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +136,7 @@
 		2876BB96228DE9CF005616FD /* AgileContentProjectTests */ = {
 			isa = PBXGroup;
 			children = (
+				2876BBDA22904109005616FD /* NetworkServiceTests */,
 				2876BB97228DE9CF005616FD /* AgileContentProjectTests.swift */,
 				2876BB99228DE9CF005616FD /* Info.plist */,
 			);
@@ -128,7 +155,8 @@
 		2876BBB0228DEA6C005616FD /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
-				2876BBB6228DF35A005616FD /* View */,
+				2876BBB9228DF7A9005616FD /* ApplicationLogic */,
+				2876BBBA228DF7B6005616FD /* UserInterface */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -160,7 +188,11 @@
 		2876BBB4228DEE54005616FD /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2876BBCB228EDC62005616FD /* GithubAPI */,
+				2876BBC4228E0476005616FD /* NetworkService */,
 				2876BB82228DE9CE005616FD /* AppDelegate.swift */,
+				2876BBC0228DFCF6005616FD /* GithubUser.swift */,
+				2876BBD2228EDDC4005616FD /* GithubRepository.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -182,6 +214,61 @@
 				2876BBB7228DF39D005616FD /* HomeScreenViewInterface.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2876BBB9228DF7A9005616FD /* ApplicationLogic */ = {
+			isa = PBXGroup;
+			children = (
+				2876BBBB228DF824005616FD /* Interactor */,
+			);
+			path = ApplicationLogic;
+			sourceTree = "<group>";
+		};
+		2876BBBA228DF7B6005616FD /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				2876BBB6228DF35A005616FD /* View */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		2876BBBB228DF824005616FD /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2876BBBE228DFBA4005616FD /* HomeScreenInteractorInterface.swift */,
+				2876BBC2228DFF20005616FD /* HomeScreenInteractorDelegate.swift */,
+				2876BBBC228DF839005616FD /* HomeScreenInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		2876BBC4228E0476005616FD /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				2876BBD0228EDC91005616FD /* GithubAPI.swift */,
+				2876BBC9228E06AC005616FD /* NetworkService.swift */,
+				2876BBD822902D1F005616FD /* NetworkServiceProtocols.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		2876BBCB228EDC62005616FD /* GithubAPI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GithubAPI;
+			sourceTree = "<group>";
+		};
+		2876BBDA22904109005616FD /* NetworkServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				2876BBDB22904150005616FD /* existing_user_response.json */,
+				2876BBDD22904156005616FD /* inexistent_user_response.json */,
+				2876BBDF22904AED005616FD /* user_repositories_response.json */,
+				2876BBD4228F183C005616FD /* GithubAPITests.swift */,
+				2876BBD6228F2123005616FD /* NetworkServiceTests.swift */,
+			);
+			path = NetworkServiceTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +385,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2876BBDC22904150005616FD /* existing_user_response.json in Resources */,
+				2876BBDE22904156005616FD /* inexistent_user_response.json in Resources */,
+				2876BBE022904AED005616FD /* user_repositories_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,9 +405,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2876BBCA228E06AC005616FD /* NetworkService.swift in Sources */,
+				2876BBD922902D1F005616FD /* NetworkServiceProtocols.swift in Sources */,
+				2876BBC3228DFF20005616FD /* HomeScreenInteractorDelegate.swift in Sources */,
+				2876BBD1228EDC91005616FD /* GithubAPI.swift in Sources */,
 				2876BB85228DE9CE005616FD /* HomeScreenViewController.swift in Sources */,
+				2876BBC1228DFCF6005616FD /* GithubUser.swift in Sources */,
+				2876BBBD228DF839005616FD /* HomeScreenInteractor.swift in Sources */,
 				2876BBB8228DF39D005616FD /* HomeScreenViewInterface.swift in Sources */,
 				2876BB83228DE9CE005616FD /* AppDelegate.swift in Sources */,
+				2876BBD3228EDDC4005616FD /* GithubRepository.swift in Sources */,
+				2876BBBF228DFBA4005616FD /* HomeScreenInteractorInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +424,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2876BB98228DE9CF005616FD /* AgileContentProjectTests.swift in Sources */,
+				2876BBD7228F2123005616FD /* NetworkServiceTests.swift in Sources */,
+				2876BBD5228F183C005616FD /* GithubAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
