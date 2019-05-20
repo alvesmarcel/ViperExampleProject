@@ -21,7 +21,7 @@ class ProfileDetailViewController: UIViewController {
     }
     
     func configureInitialUI() {
-        userNameLabel.text = presenter?.githubUser?.name
+        userNameLabel.text = presenter?.githubUser?.name ?? presenter?.githubUser?.username
         userAvatarImageView.layer.cornerRadius = userAvatarImageView.frame.size.width / 2
     }
     
@@ -38,8 +38,6 @@ extension ProfileDetailViewController: ProfileDetailViewInterface {
     func updateUserAvatar() {
         DispatchQueue.main.async {
             self.userAvatarImageView.image = self.presenter?.userAvatar
-            self.userNameLabel.text = self.presenter?.githubUser?.name
-            
         }
     }
     
