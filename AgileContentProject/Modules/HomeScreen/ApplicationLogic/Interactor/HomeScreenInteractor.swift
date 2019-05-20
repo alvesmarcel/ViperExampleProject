@@ -10,10 +10,22 @@ class HomeScreenInteractor: HomeScreenInteractorInterface {
     func getGithubUser(withUsername username: String) {
         if isGithubUsernameValid(username: username) {
             githubAPI?.getUser(withUsername: username) { (githubUser, error) in
-                self.presenter?.didRetrieveGithubUser(user: githubUser, withError: HomeScreenError(error: error))
+                if let user = githubUser {
+                    self.presenter?.didRetrieveGithubUser(user)
+                } else {
+                    guard let unwrappedError = error else {
+                        print("[HomeScreenInteractor]: Error should not be nil if user is nil")
+                        return
+                    }
+                    guard let homeScreenError = HomeScreenError(error: unwrappedError) else {
+                        print("[HomeScreenInteractor]: Unknown error created nil HomeScreenError")
+                        return
+                    }
+                    self.presenter?.onError(homeScreenError)
+                }
             }
         } else {
-            presenter?.didRetrieveGithubUser(user: nil, withError: .invalidGithubUsername)
+            presenter?.onError(.invalidGithubUsername) // We don't make requests for invalid user
         }
     }
     
