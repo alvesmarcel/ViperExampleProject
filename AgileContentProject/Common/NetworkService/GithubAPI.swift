@@ -57,8 +57,9 @@ class GithubAPI {
                 do {
                     let userRepos = try JSONDecoder().decode([GithubRepository].self, from: jsonData)
                     completionHandler(userRepos, nil)
-                } catch {
+                } catch let parsingError {
                     print("[GithubAPI]: Parsing JSON error in getUserRepositories(user:completionHandler:)")
+                    print(parsingError)
                 }
             } else {
                 // Connection error

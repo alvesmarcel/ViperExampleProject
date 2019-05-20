@@ -11,7 +11,7 @@ extension ProfileDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellIdentifier)
         cell?.textLabel?.text = presenter?.userRepositories?[indexPath.row].name ?? ""
-        cell?.detailTextLabel?.text = presenter?.userRepositories?[indexPath.row].language ?? ""
+        cell?.detailTextLabel?.text = presenter?.userRepositories?[indexPath.row].language ?? "No language"
         return cell ?? UITableViewCell()
     }
     
