@@ -30,7 +30,7 @@ class GithubAPITests: XCTestCase {
 
         networkService.data = jsonData
         
-        let expectedUser = GithubUser(username: "alvesmarcel", avatarURL: URL(string: "https://avatars2.githubusercontent.com/u/8361685?v=4"))
+        let expectedUser = GithubUser(name: "Marcel O. Alves", username: "alvesmarcel", avatarURL: URL(string: "https://avatars2.githubusercontent.com/u/8361685?v=4")!)
         var actualUser: GithubUser?
         var actualError: Error?
         githubAPI.getUser(withUsername: "alvesmarcel") { (githubUser, error) in
@@ -38,6 +38,7 @@ class GithubAPITests: XCTestCase {
             actualError = error
         }
         
+        XCTAssertEqual(actualUser?.name, expectedUser.name)
         XCTAssertEqual(actualUser?.username, expectedUser.username)
         XCTAssertEqual(actualUser?.avatarURL, expectedUser.avatarURL)
         XCTAssertNil(actualError)
@@ -92,7 +93,7 @@ class GithubAPITests: XCTestCase {
             GithubRepository(name: "V-Voice-Changer", language: "Swift")
         ]
         
-        let githubUser = GithubUser(username: "alvesmarcel", avatarURL: nil)
+        let githubUser = GithubUser(name: "Marcel O. Alves", username: "alvesmarcel", avatarURL: URL(string: "https://avatars2.githubusercontent.com/u/8361685?v=4")!)
         var actualRepositories: [GithubRepository]?
         var actualError: Error?
         
@@ -112,7 +113,7 @@ class GithubAPITests: XCTestCase {
     func testGetRepositoriesNoConnection() {
         networkService.error = NSError(domain: "Connection Error", code: 0, userInfo: [NSLocalizedDescriptionKey : "Connection Error"])
         
-        let githubUser = GithubUser(username: "alvesmarcel", avatarURL: nil)
+        let githubUser = GithubUser(name: "Marcel O. Alves", username: "alvesmarcel", avatarURL: URL(string: "https://avatars2.githubusercontent.com/u/8361685?v=4")!)
         var actualRepositories: [GithubRepository]?
         var actualError: Error?
         githubAPI.getUserRepositories(user: githubUser) { (repositories, error) in

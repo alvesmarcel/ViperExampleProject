@@ -12,8 +12,6 @@
 		2876BB88228DE9CE005616FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2876BB86228DE9CE005616FD /* Main.storyboard */; };
 		2876BB8A228DE9CF005616FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2876BB89228DE9CF005616FD /* Assets.xcassets */; };
 		2876BB8D228DE9CF005616FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2876BB8B228DE9CF005616FD /* LaunchScreen.storyboard */; };
-		2876BB98228DE9CF005616FD /* AgileContentProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BB97228DE9CF005616FD /* AgileContentProjectTests.swift */; };
-		2876BBA3228DE9CF005616FD /* AgileContentProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBA2228DE9CF005616FD /* AgileContentProjectUITests.swift */; };
 		2876BBB8228DF39D005616FD /* HomeScreenViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBB7228DF39D005616FD /* HomeScreenViewInterface.swift */; };
 		2876BBBD228DF839005616FD /* HomeScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBBC228DF839005616FD /* HomeScreenInteractor.swift */; };
 		2876BBBF228DFBA4005616FD /* HomeScreenInteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBBE228DFBA4005616FD /* HomeScreenInteractorInterface.swift */; };
@@ -54,13 +52,6 @@
 			remoteGlobalIDString = 2876BB7E228DE9CE005616FD;
 			remoteInfo = AgileContentProject;
 		};
-		2876BB9F228DE9CF005616FD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2876BB77228DE9CE005616FD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2876BB7E228DE9CE005616FD;
-			remoteInfo = AgileContentProject;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -72,11 +63,7 @@
 		2876BB8C228DE9CF005616FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2876BB8E228DE9CF005616FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2876BB93228DE9CF005616FD /* AgileContentProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgileContentProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2876BB97228DE9CF005616FD /* AgileContentProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgileContentProjectTests.swift; sourceTree = "<group>"; };
 		2876BB99228DE9CF005616FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2876BB9E228DE9CF005616FD /* AgileContentProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgileContentProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2876BBA2228DE9CF005616FD /* AgileContentProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgileContentProjectUITests.swift; sourceTree = "<group>"; };
-		2876BBA4228DE9CF005616FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2876BBB7228DF39D005616FD /* HomeScreenViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewInterface.swift; sourceTree = "<group>"; };
 		2876BBBC228DF839005616FD /* HomeScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenInteractor.swift; sourceTree = "<group>"; };
 		2876BBBE228DFBA4005616FD /* HomeScreenInteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenInteractorInterface.swift; sourceTree = "<group>"; };
@@ -124,13 +111,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2876BB9B228DE9CF005616FD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -139,7 +119,6 @@
 			children = (
 				2876BB81228DE9CE005616FD /* AgileContentProject */,
 				2876BB96228DE9CF005616FD /* AgileContentProjectTests */,
-				2876BBA1228DE9CF005616FD /* AgileContentProjectUITests */,
 				2876BB80228DE9CE005616FD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -149,7 +128,6 @@
 			children = (
 				2876BB7F228DE9CE005616FD /* AgileContentProject.app */,
 				2876BB93228DE9CF005616FD /* AgileContentProjectTests.xctest */,
-				2876BB9E228DE9CF005616FD /* AgileContentProjectUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,19 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				2876BBDA22904109005616FD /* NetworkServiceTests */,
-				2876BB97228DE9CF005616FD /* AgileContentProjectTests.swift */,
 				2876BB99228DE9CF005616FD /* Info.plist */,
 			);
 			path = AgileContentProjectTests;
-			sourceTree = "<group>";
-		};
-		2876BBA1228DE9CF005616FD /* AgileContentProjectUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2876BBA2228DE9CF005616FD /* AgileContentProjectUITests.swift */,
-				2876BBA4228DE9CF005616FD /* Info.plist */,
-			);
-			path = AgileContentProjectUITests;
 			sourceTree = "<group>";
 		};
 		2876BBB0228DEA6C005616FD /* HomeScreen */ = {
@@ -429,24 +397,6 @@
 			productReference = 2876BB93228DE9CF005616FD /* AgileContentProjectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2876BB9D228DE9CF005616FD /* AgileContentProjectUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2876BBAD228DE9CF005616FD /* Build configuration list for PBXNativeTarget "AgileContentProjectUITests" */;
-			buildPhases = (
-				2876BB9A228DE9CF005616FD /* Sources */,
-				2876BB9B228DE9CF005616FD /* Frameworks */,
-				2876BB9C228DE9CF005616FD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2876BBA0228DE9CF005616FD /* PBXTargetDependency */,
-			);
-			name = AgileContentProjectUITests;
-			productName = AgileContentProjectUITests;
-			productReference = 2876BB9E228DE9CF005616FD /* AgileContentProjectUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -461,10 +411,6 @@
 						CreatedOnToolsVersion = 10.2.1;
 					};
 					2876BB92228DE9CF005616FD = {
-						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = 2876BB7E228DE9CE005616FD;
-					};
-					2876BB9D228DE9CF005616FD = {
 						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = 2876BB7E228DE9CE005616FD;
 					};
@@ -485,7 +431,6 @@
 			targets = (
 				2876BB7E228DE9CE005616FD /* AgileContentProject */,
 				2876BB92228DE9CF005616FD /* AgileContentProjectTests */,
-				2876BB9D228DE9CF005616FD /* AgileContentProjectUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -508,13 +453,6 @@
 				2876BBDC22904150005616FD /* existing_user_response.json in Resources */,
 				2876BBDE22904156005616FD /* inexistent_user_response.json in Resources */,
 				2876BBE022904AED005616FD /* user_repositories_response.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2876BB9C228DE9CF005616FD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,17 +497,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2876BB98228DE9CF005616FD /* AgileContentProjectTests.swift in Sources */,
 				2876BBD7228F2123005616FD /* NetworkServiceTests.swift in Sources */,
 				2876BBD5228F183C005616FD /* GithubAPITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2876BB9A228DE9CF005616FD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2876BBA3228DE9CF005616FD /* AgileContentProjectUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,11 +509,6 @@
 			isa = PBXTargetDependency;
 			target = 2876BB7E228DE9CE005616FD /* AgileContentProject */;
 			targetProxy = 2876BB94228DE9CF005616FD /* PBXContainerItemProxy */;
-		};
-		2876BBA0228DE9CF005616FD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2876BB7E228DE9CE005616FD /* AgileContentProject */;
-			targetProxy = 2876BB9F228DE9CF005616FD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -804,46 +728,6 @@
 			};
 			name = Release;
 		};
-		2876BBAE228DE9CF005616FD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z2U9XN2WL3;
-				INFOPLIST_FILE = AgileContentProjectUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alvesmarcel.AgileContentProjectUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AgileContentProject;
-			};
-			name = Debug;
-		};
-		2876BBAF228DE9CF005616FD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z2U9XN2WL3;
-				INFOPLIST_FILE = AgileContentProjectUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alvesmarcel.AgileContentProjectUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AgileContentProject;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -870,15 +754,6 @@
 			buildConfigurations = (
 				2876BBAB228DE9CF005616FD /* Debug */,
 				2876BBAC228DE9CF005616FD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2876BBAD228DE9CF005616FD /* Build configuration list for PBXNativeTarget "AgileContentProjectUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2876BBAE228DE9CF005616FD /* Debug */,
-				2876BBAF228DE9CF005616FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
