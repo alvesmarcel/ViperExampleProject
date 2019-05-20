@@ -16,6 +16,7 @@ class ProfileDetailPresenter: ProfileDetailPresenterInterface {
             return
         }
         interactor?.getGithubUserRepositories(githubUser: user)
+        interactor?.getUserProfileImage(githubUser: user)
     }
     
 }
@@ -32,7 +33,8 @@ extension ProfileDetailPresenter: ProfileDetailInteractorDelegate {
     }
     
     func didRetrieveGithubUserAvatar(imageData: Data) {
-        // TODO
+        userAvatar = UIImage(data: imageData)
+        view?.updateUserAvatar()
     }
     
 }

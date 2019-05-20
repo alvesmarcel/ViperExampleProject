@@ -5,12 +5,22 @@ class ProfileDetailViewController: UIViewController {
     @IBOutlet weak var repositoriesTableView: UITableView!
     let tableViewCellIdentifier = "RepositoryCell"
     
+    @IBOutlet weak var userAvatarImageView: UIImageView!
+    @IBOutlet weak var userNameLabel: UILabel!
+    
     var presenter: ProfileDetailPresenterInterface?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
         repositoriesTableView.dataSource = self
+        navigationController?.navigationBar.shadowImage = UIImage() // Removes separator line from navigation bar
+        configureInitialUI()
+    }
+    
+    func configureInitialUI() {
+        userNameLabel.text = presenter?.githubUser?.name
+        userAvatarImageView.layer.cornerRadius = userAvatarImageView.frame.size.width / 2
     }
     
 }
@@ -25,7 +35,10 @@ extension ProfileDetailViewController: ProfileDetailViewInterface {
     
     func updateUserAvatar() {
         DispatchQueue.main.async {
-            // TODO: Set avatar image
+            //self.navigationController?.navigationBar.setBackgroundImage(self.presenter?.userAvatar, for: .default)
+            self.userAvatarImageView.image = self.presenter?.userAvatar
+            self.userNameLabel.text = self.presenter?.githubUser?.name
+            
         }
     }
     

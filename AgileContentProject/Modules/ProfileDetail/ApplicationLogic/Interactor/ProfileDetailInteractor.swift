@@ -12,7 +12,9 @@ class ProfileDetailInteractor: ProfileDetailInteractorInterface {
     
     func getUserProfileImage(githubUser: GithubUser) {
         networkService?.requestDataFromURL(url: githubUser.avatarURL) { (data, error) in
-            // TODO
+            if let imageData = data {
+                self.presenter?.didRetrieveGithubUserAvatar(imageData: imageData)
+            }
         }
     }
     
