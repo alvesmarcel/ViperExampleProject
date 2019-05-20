@@ -43,6 +43,7 @@
 		2876BC072292CA31005616FD /* ProfileDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BC062292CA31005616FD /* ProfileDetailInteractor.swift */; };
 		2876BC092292CA40005616FD /* ProfileDetailInteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BC082292CA40005616FD /* ProfileDetailInteractorInterface.swift */; };
 		2876BC0B2292D24C005616FD /* ProfileDetailInteractorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BC0A2292D24C005616FD /* ProfileDetailInteractorDelegate.swift */; };
+		2876BC0D22930934005616FD /* HomeScreenViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BC0C22930934005616FD /* HomeScreenViewController+UITextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		2876BC062292CA31005616FD /* ProfileDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailInteractor.swift; sourceTree = "<group>"; };
 		2876BC082292CA40005616FD /* ProfileDetailInteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailInteractorInterface.swift; sourceTree = "<group>"; };
 		2876BC0A2292D24C005616FD /* ProfileDetailInteractorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailInteractorDelegate.swift; sourceTree = "<group>"; };
+		2876BC0C22930934005616FD /* HomeScreenViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeScreenViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,7 @@
 			children = (
 				2876BBB7228DF39D005616FD /* HomeScreenViewInterface.swift */,
 				2876BB84228DE9CE005616FD /* HomeScreenViewController.swift */,
+				2876BC0C22930934005616FD /* HomeScreenViewController+UITextFieldDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				2876BC012292C647005616FD /* ProfileDetailViewController+UITableViewDataSource.swift in Sources */,
 				2876BBFB2292BAA8005616FD /* ProfileDetailWireframeInterface.swift in Sources */,
 				2876BBE422907935005616FD /* HomeScreenPresenter.swift in Sources */,
+				2876BC0D22930934005616FD /* HomeScreenViewController+UITextFieldDelegate.swift in Sources */,
 				2876BBD922902D1F005616FD /* NetworkServiceProtocols.swift in Sources */,
 				2876BBE822907F38005616FD /* HomeScreenError.swift in Sources */,
 				2876BBC3228DFF20005616FD /* HomeScreenInteractorDelegate.swift in Sources */,

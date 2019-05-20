@@ -13,6 +13,7 @@ class HomeScreenViewController: UIViewController {
         let backItem = UIBarButtonItem()
         backItem.title = "Back"
         navigationItem.backBarButtonItem = backItem
+        usernameTextField.delegate = self
     }
 
     @IBAction func searchButtonTapped(_ sender: UIButton) {
