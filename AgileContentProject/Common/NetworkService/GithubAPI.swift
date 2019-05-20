@@ -27,9 +27,11 @@ class GithubAPI {
                     }
                     
                     // Check if the user exists in the JSON dictionary, and return the GithubUser object if it does
-                    if let username = jsonDict["login"] as? String, let avatarURL = jsonDict["avatar_url"] as? String {
-                        let url = URL(string: avatarURL)
-                        let user = GithubUser(username: username, avatarURL: url)
+                    if let name = jsonDict["name"] as? String,
+                       let username = jsonDict["login"] as? String,
+                       let avatarURL = jsonDict["avatar_url"] as? String {
+                        let url = URL(string: avatarURL)!
+                        let user = GithubUser(name: name, username: username, avatarURL: url)
                         completionHandler(user, nil)
                     } else {
                         let error = NSError(domain: "GithubAPI", code: 1, userInfo: [NSLocalizedDescriptionKey : "Inexistent user"])
