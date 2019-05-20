@@ -1,3 +1,5 @@
+import UIKit
+
 class HomeScreenPresenter: HomeScreenPresenterInterface {
 
     weak var view: HomeScreenViewInterface?
@@ -22,7 +24,11 @@ extension HomeScreenPresenter: HomeScreenInteractorDelegate {
                 view?.showErrorMessage(title: "Invalid Github Username", message: "This is an invalid Github username. Please provide a valid username.")
             }
         } else {
-            // TODO: Implement transition to the next screen
+            guard let viewNavController = (view as? UIViewController)?.navigationController else {
+                print("[HomeScreenPresenter]: Error finding the NavigationController of HomeScreenViewController")
+                return
+            }
+            wireframe?.presentProfileDetail(fromNavigationController: viewNavController)
         }
     }
 }

@@ -28,5 +28,11 @@ class HomeScreenWireframe: HomeScreenWireframeInterface {
         
         return navigationController
     }
+    
+    func presentProfileDetail(fromNavigationController navigationController: UINavigationController) {
+        DispatchQueue.main.async {
+            navigationController.pushViewController(ProfileDetailWireframe.createProfileDetailViewController(), animated: true)
+        }
+    }
 
 }
