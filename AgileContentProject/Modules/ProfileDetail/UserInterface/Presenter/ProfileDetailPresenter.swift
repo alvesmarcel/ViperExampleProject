@@ -25,13 +25,13 @@ class ProfileDetailPresenter: ProfileDetailPresenterInterface {
 
 extension ProfileDetailPresenter: ProfileDetailInteractorDelegate {
     
-    func didRetrieveGithubUserRepositories(repositories: [GithubRepository]?, withError error: Error?) {
-        if let repos = repositories {
-            userRepositories = repos
-            view?.updateUserRepositoriesTableView()
-        } else {
-            view?.showErrorMessage(title: "Network Error", message: "A network error has occurred. Check your Internet connection and try again later.")
-        }
+    func didRetrieveGithubUserRepositories(_ repositories: [GithubRepository]) {
+        userRepositories = repositories
+        view?.updateUserRepositoriesTableView()
+    }
+    
+    func onError(_ error: Error) {
+        view?.showErrorMessage(title: "Network Error", message: "A network error has occurred. Check your Internet connection and try again later.")
     }
     
     func didRetrieveGithubUserAvatar(imageData: Data) {

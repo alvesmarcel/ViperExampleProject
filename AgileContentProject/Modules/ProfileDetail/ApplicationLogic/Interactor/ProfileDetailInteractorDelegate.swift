@@ -4,6 +4,7 @@
 import Foundation
 
 protocol ProfileDetailInteractorDelegate: class {
-    func didRetrieveGithubUserRepositories(repositories: [GithubRepository]?, withError error: Error?)
+    func didRetrieveGithubUserRepositories(_ repositories: [GithubRepository])
     func didRetrieveGithubUserAvatar(imageData: Data)
+    func onError(_ error: Error)
 }
