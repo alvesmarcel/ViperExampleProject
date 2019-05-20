@@ -1,3 +1,5 @@
+// Abstract: Extension of ProfileDetailViewController to populate its tableView with the data held by the ProfileDetail presenter
+
 import UIKit
 
 extension ProfileDetailViewController: UITableViewDataSource {

@@ -1,3 +1,5 @@
+// Abstract: Implementation of the HomeScreen wireframe, and HomeScreen module dependency initialization
+
 import UIKit
 
 class HomeScreenWireframe: HomeScreenWireframeInterface {

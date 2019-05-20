@@ -1,3 +1,5 @@
+// Abstract: Implementation of ProfileDetail view, which listens to the user initiated events and informs them to the presenter
+
 import UIKit
 
 class ProfileDetailViewController: UIViewController {
@@ -35,7 +37,6 @@ extension ProfileDetailViewController: ProfileDetailViewInterface {
     
     func updateUserAvatar() {
         DispatchQueue.main.async {
-            //self.navigationController?.navigationBar.setBackgroundImage(self.presenter?.userAvatar, for: .default)
             self.userAvatarImageView.image = self.presenter?.userAvatar
             self.userNameLabel.text = self.presenter?.githubUser?.name
             

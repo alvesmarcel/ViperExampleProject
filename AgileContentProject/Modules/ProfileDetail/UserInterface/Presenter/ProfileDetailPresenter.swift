@@ -1,10 +1,12 @@
+// Abstract: Implementation of the ProfileDetail presenter, which intermediates the communication between the view (UI) and
+// the interactor (application logic)
+
 import UIKit
 
 class ProfileDetailPresenter: ProfileDetailPresenterInterface {
     
     weak var view: ProfileDetailViewInterface?
     var interactor: ProfileDetailInteractorInterface?
-    var wireframe: ProfileDetailWireframeInterface?
     
     var githubUser: GithubUser?
     var userRepositories: [GithubRepository]?

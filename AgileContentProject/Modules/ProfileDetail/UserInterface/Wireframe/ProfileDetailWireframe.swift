@@ -1,3 +1,5 @@
+// Abstract: Implementation of the ProfileDetail wireframe, and ProfileDetail module dependency initialization
+
 import UIKit
 
 class ProfileDetailWireframe: ProfileDetailWireframeInterface {
@@ -13,11 +15,9 @@ class ProfileDetailWireframe: ProfileDetailWireframeInterface {
         
         let presenter: ProfileDetailPresenterInterface & ProfileDetailInteractorDelegate = ProfileDetailPresenter()
         let interactor: ProfileDetailInteractorInterface  = ProfileDetailInteractor()
-        let wireframe: ProfileDetailWireframeInterface = ProfileDetailWireframe()
         
         profileDetailView.presenter = presenter
         presenter.view = profileDetailView
-        presenter.wireframe = wireframe
         presenter.interactor = interactor
         interactor.presenter = presenter
         

@@ -1,3 +1,6 @@
+// Abstract: Implementation of the HomeScreen presenter, which intermediates the communication between the view (UI) and
+// the interactor (application logic)
+
 import UIKit
 
 class HomeScreenPresenter: HomeScreenPresenterInterface {

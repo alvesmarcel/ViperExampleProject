@@ -1,4 +1,4 @@
-// Abstract: These protocols and extensions are mainly used to mock classes that we don't own in a test environment
+// Abstract: These protocols and extensions are mainly used to mock the classes that we don't own in a test environment
 
 import Foundation
 

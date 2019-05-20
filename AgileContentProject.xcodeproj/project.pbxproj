@@ -343,9 +343,9 @@
 		2876BBF32290B2F6005616FD /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
-				2876BBF72290B322005616FD /* View */,
-				2876BBF62290B31D005616FD /* Presenter */,
 				2876BBF52290B317005616FD /* Wireframe */,
+				2876BBF62290B31D005616FD /* Presenter */,
+				2876BBF72290B322005616FD /* View */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";

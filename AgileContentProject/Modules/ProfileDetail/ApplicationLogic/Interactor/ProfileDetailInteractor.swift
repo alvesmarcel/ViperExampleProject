@@ -1,3 +1,5 @@
+// Abstract: Implementation of ProfileDetail interactor, which deals the ProfileDetail application logic
+
 class ProfileDetailInteractor: ProfileDetailInteractorInterface {
     
     var githubAPI: GithubAPI?

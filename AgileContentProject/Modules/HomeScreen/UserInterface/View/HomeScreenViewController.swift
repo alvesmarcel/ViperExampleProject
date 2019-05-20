@@ -1,3 +1,5 @@
+// Abstract: Implementation of HomeScreen view, which listens to the user initiated events and informs them to the presenter
+
 import UIKit
 
 class HomeScreenViewController: UIViewController {

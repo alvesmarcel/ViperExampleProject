@@ -1,3 +1,5 @@
+// Abstract: Implementation of HomeScreen interactor, which deals the HomeScreen application logic
+
 import Foundation
 
 class HomeScreenInteractor: HomeScreenInteractorInterface {
