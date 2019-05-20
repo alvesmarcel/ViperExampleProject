@@ -20,9 +20,11 @@ class HomeScreenViewController: UIViewController {
             presenter?.getGithubUserAction(withUsername: text)
         }
     }
+    
 }
 
 extension HomeScreenViewController: HomeScreenViewInterface {
+    
     func showErrorMessage(title: String, message: String) {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -30,4 +32,5 @@ extension HomeScreenViewController: HomeScreenViewInterface {
             self.present(alert, animated: true)
         }
     }
+    
 }

@@ -16,6 +16,7 @@ class HomeScreenPresenter: HomeScreenPresenterInterface {
 }
 
 extension HomeScreenPresenter: HomeScreenInteractorDelegate {
+    
     func didRetrieveGithubUser(user: GithubUser?, withError error: HomeScreenError?) {
         if let error = error {
             switch error {
@@ -38,4 +39,5 @@ extension HomeScreenPresenter: HomeScreenInteractorDelegate {
             wireframe?.presentProfileDetail(fromNavigationController: viewNavController, withGithubUser: githubUser)
         }
     }
+    
 }

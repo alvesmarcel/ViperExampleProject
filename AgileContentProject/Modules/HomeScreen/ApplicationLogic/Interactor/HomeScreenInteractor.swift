@@ -16,11 +16,13 @@ class HomeScreenInteractor: HomeScreenInteractorInterface {
             presenter?.didRetrieveGithubUser(user: nil, withError: .invalidGithubUsername)
         }
     }
+    
 }
 
 // MARK: Private functions
 
 extension HomeScreenInteractor {
+    
     private func isGithubUsernameValid(username: String) -> Bool {
         // Valid Github username: (source: https://github.com/shinnn/github-username-regex)
         // - Contains alphanumeric characters or hyphens.
@@ -29,4 +31,5 @@ extension HomeScreenInteractor {
         // - Maximum of 39 characters.
         return username.range(of: #"^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$"#, options: .regularExpression) != nil
     }
+    
 }
