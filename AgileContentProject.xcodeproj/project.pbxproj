@@ -36,6 +36,13 @@
 		2876BBF92292BA8A005616FD /* ProfileDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBF82292BA89005616FD /* ProfileDetailWireframe.swift */; };
 		2876BBFB2292BAA8005616FD /* ProfileDetailWireframeInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBFA2292BAA8005616FD /* ProfileDetailWireframeInterface.swift */; };
 		2876BBFD2292BBB1005616FD /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBFC2292BBB1005616FD /* ProfileDetailViewController.swift */; };
+		2876BBFF2292C604005616FD /* ProfileDetailViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BBFE2292C604005616FD /* ProfileDetailViewInterface.swift */; };
+		2876BC012292C647005616FD /* ProfileDetailViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BC002292C647005616FD /* ProfileDetailViewController+UITableViewDataSource.swift */; };
+		2876BC032292C967005616FD /* ProfileDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BC022292C967005616FD /* ProfileDetailPresenter.swift */; };
+		2876BC052292C980005616FD /* ProfileDetailPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BC042292C980005616FD /* ProfileDetailPresenterInterface.swift */; };
+		2876BC072292CA31005616FD /* ProfileDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BC062292CA31005616FD /* ProfileDetailInteractor.swift */; };
+		2876BC092292CA40005616FD /* ProfileDetailInteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BC082292CA40005616FD /* ProfileDetailInteractorInterface.swift */; };
+		2876BC0B2292D24C005616FD /* ProfileDetailInteractorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876BC0A2292D24C005616FD /* ProfileDetailInteractorDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +98,13 @@
 		2876BBF82292BA89005616FD /* ProfileDetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailWireframe.swift; sourceTree = "<group>"; };
 		2876BBFA2292BAA8005616FD /* ProfileDetailWireframeInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailWireframeInterface.swift; sourceTree = "<group>"; };
 		2876BBFC2292BBB1005616FD /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
+		2876BBFE2292C604005616FD /* ProfileDetailViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewInterface.swift; sourceTree = "<group>"; };
+		2876BC002292C647005616FD /* ProfileDetailViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileDetailViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		2876BC022292C967005616FD /* ProfileDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailPresenter.swift; sourceTree = "<group>"; };
+		2876BC042292C980005616FD /* ProfileDetailPresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailPresenterInterface.swift; sourceTree = "<group>"; };
+		2876BC062292CA31005616FD /* ProfileDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailInteractor.swift; sourceTree = "<group>"; };
+		2876BC082292CA40005616FD /* ProfileDetailInteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailInteractorInterface.swift; sourceTree = "<group>"; };
+		2876BC0A2292D24C005616FD /* ProfileDetailInteractorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailInteractorDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,6 +353,9 @@
 		2876BBF42290B310005616FD /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				2876BC082292CA40005616FD /* ProfileDetailInteractorInterface.swift */,
+				2876BC0A2292D24C005616FD /* ProfileDetailInteractorDelegate.swift */,
+				2876BC062292CA31005616FD /* ProfileDetailInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -355,6 +372,8 @@
 		2876BBF62290B31D005616FD /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				2876BC042292C980005616FD /* ProfileDetailPresenterInterface.swift */,
+				2876BC022292C967005616FD /* ProfileDetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -362,7 +381,9 @@
 		2876BBF72290B322005616FD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2876BBFE2292C604005616FD /* ProfileDetailViewInterface.swift */,
 				2876BBFC2292BBB1005616FD /* ProfileDetailViewController.swift */,
+				2876BC002292C647005616FD /* ProfileDetailViewController+UITableViewDataSource.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -501,12 +522,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2876BC0B2292D24C005616FD /* ProfileDetailInteractorDelegate.swift in Sources */,
 				2876BBCA228E06AC005616FD /* NetworkService.swift in Sources */,
+				2876BC052292C980005616FD /* ProfileDetailPresenterInterface.swift in Sources */,
+				2876BC012292C647005616FD /* ProfileDetailViewController+UITableViewDataSource.swift in Sources */,
 				2876BBFB2292BAA8005616FD /* ProfileDetailWireframeInterface.swift in Sources */,
 				2876BBE422907935005616FD /* HomeScreenPresenter.swift in Sources */,
 				2876BBD922902D1F005616FD /* NetworkServiceProtocols.swift in Sources */,
 				2876BBE822907F38005616FD /* HomeScreenError.swift in Sources */,
 				2876BBC3228DFF20005616FD /* HomeScreenInteractorDelegate.swift in Sources */,
+				2876BC092292CA40005616FD /* ProfileDetailInteractorInterface.swift in Sources */,
 				2876BBD1228EDC91005616FD /* GithubAPI.swift in Sources */,
 				2876BBED229088C6005616FD /* HomeScreenWireframe.swift in Sources */,
 				2876BB85228DE9CE005616FD /* HomeScreenViewController.swift in Sources */,
@@ -518,8 +543,11 @@
 				2876BBEF229088F0005616FD /* HomeScreenWireframeInterface.swift in Sources */,
 				2876BB83228DE9CE005616FD /* AppDelegate.swift in Sources */,
 				2876BBD3228EDDC4005616FD /* GithubRepository.swift in Sources */,
+				2876BBFF2292C604005616FD /* ProfileDetailViewInterface.swift in Sources */,
+				2876BC032292C967005616FD /* ProfileDetailPresenter.swift in Sources */,
 				2876BBBF228DFBA4005616FD /* HomeScreenInteractorInterface.swift in Sources */,
 				2876BBE622907944005616FD /* HomeScreenPresenterInterface.swift in Sources */,
+				2876BC072292CA31005616FD /* ProfileDetailInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

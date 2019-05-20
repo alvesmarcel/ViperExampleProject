@@ -28,7 +28,11 @@ extension HomeScreenPresenter: HomeScreenInteractorDelegate {
                 print("[HomeScreenPresenter]: Error finding the NavigationController of HomeScreenViewController")
                 return
             }
-            wireframe?.presentProfileDetail(fromNavigationController: viewNavController)
+            guard let githubUser = user else {
+                print("[HomeScreenPresenter]: Github User should not be nil at this point")
+                return
+            }
+            wireframe?.presentProfileDetail(fromNavigationController: viewNavController, withGithubUser: githubUser)
         }
     }
 }

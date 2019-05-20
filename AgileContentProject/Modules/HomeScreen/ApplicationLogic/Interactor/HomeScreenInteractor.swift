@@ -16,6 +16,8 @@ class HomeScreenInteractor: HomeScreenInteractorInterface {
     }
 }
 
+// MARK: Private functions
+
 extension HomeScreenInteractor {
     private func isGithubUsernameValid(username: String) -> Bool {
         // Valid Github username: (source: https://github.com/shinnn/github-username-regex)

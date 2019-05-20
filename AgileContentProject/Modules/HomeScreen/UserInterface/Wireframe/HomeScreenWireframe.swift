@@ -10,6 +10,8 @@ class HomeScreenWireframe: HomeScreenWireframeInterface {
             return UIViewController()
         }
         
+        // Connecting VIPER parts
+        
         let presenter: HomeScreenPresenterInterface & HomeScreenInteractorDelegate = HomeScreenPresenter()
         let interactor: HomeScreenInteractorInterface  = HomeScreenInteractor()
         let wireframe: HomeScreenWireframeInterface = HomeScreenWireframe()
@@ -20,18 +22,18 @@ class HomeScreenWireframe: HomeScreenWireframeInterface {
         presenter.interactor = interactor
         interactor.presenter = presenter
         
-        let session = URLSession(configuration: .ephemeral)
-        session.configuration.requestCachePolicy = .reloadIgnoringLocalAndRemoteCacheData
-        session.configuration.waitsForConnectivity = false
+        // Configuring specific dependencies
+        
+        let session = NetworkService.defaultSession()
         let networkService = NetworkService(session: session)
         interactor.githubAPI = GithubAPI(networkService: networkService)
         
         return navigationController
     }
     
-    func presentProfileDetail(fromNavigationController navigationController: UINavigationController) {
+    func presentProfileDetail(fromNavigationController navigationController: UINavigationController, withGithubUser user: GithubUser) {
         DispatchQueue.main.async {
-            navigationController.pushViewController(ProfileDetailWireframe.createProfileDetailViewController(), animated: true)
+            navigationController.pushViewController(ProfileDetailWireframe.createProfileDetailViewController(withGithubUser: user), animated: true)
         }
     }
 

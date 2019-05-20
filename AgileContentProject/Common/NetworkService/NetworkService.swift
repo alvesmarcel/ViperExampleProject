@@ -21,4 +21,11 @@ class NetworkService {
         task.resume()
     }
     
+    static func defaultSession() -> URLSession {
+        let session = URLSession(configuration: .ephemeral)
+        session.configuration.requestCachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+        session.configuration.waitsForConnectivity = false
+        return session
+    }
+    
 }

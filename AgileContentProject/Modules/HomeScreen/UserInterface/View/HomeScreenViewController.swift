@@ -4,7 +4,14 @@ class HomeScreenViewController: UIViewController {
     
     @IBOutlet weak var usernameTextField: UITextField!
     
-    var presenter: HomeScreenPresenterInterface? 
+    var presenter: HomeScreenPresenterInterface?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
+    }
 
     @IBAction func searchButtonTapped(_ sender: UIButton) {
         if let text = usernameTextField.text {
