@@ -4,6 +4,8 @@ import UIKit
 
 class HomeScreenWireframe: HomeScreenWireframeInterface {
     
+    static var test: Int = 3
+    
     static let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
     
     static func createHomeScreenViewController() -> UIViewController {

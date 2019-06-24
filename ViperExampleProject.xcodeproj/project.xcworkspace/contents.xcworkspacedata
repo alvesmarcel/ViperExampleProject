@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:AgileContentProject.xcodeproj">
+      location = "self:/Users/alvesmarcel/Downloads/AgileContentProject/ViperExampleProject.xcodeproj">
    </FileRef>
 </Workspace>
